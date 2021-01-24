@@ -1,0 +1,33 @@
+#footer{
+  height: 100px;
+  opacity: 0.9;
+  background-color: #002040;
+  box-shadow: inset 12px 12px 24px #001121,
+  inset -12px -12px 24px #002f5f;
+}
+#facebook{
+  opacity: 1;
+  border-radius: 30px;
+  background: #2196F3;
+  box-shadow: inset 8px -8px 16px #104772,
+  inset -8px 8px 16px #32e6ff;
+}
+#facebook:hover{
+  border-radius: 14px;
+  background: #2196F3;
+  box-shadow: inset 5px -5px 10px #145a92,
+  inset -5px 5px 10px #2ed2ff;
+}
+#insta{
+  border-radius: 30px;
+  background: #E91E63;
+  box-shadow:
+    inset 8px -8px 16px #8c123b,
+    inset -8px 8px 16px #ff2a8b;
+}
+#insta:hover{
+  border-radius: 14px;
+  background: #E91E63;
+  box-shadow: inset 5px -5px 10px #8c123b,
+  inset -5px 5px 10px #ff2a8b;
+}

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+#title {
+  font-family: 'Goldman', cursive;
+}
+
+#logo{
+  cursor: pointer;
+  width: 20rem;
+  margin: auto;
+  border-radius: 200px;
+  background: #e0e0e0;
+  box-shadow:
+    inset 17px 17px 37px #929292,
+    inset -17px -17px 37px #ffffff;
+}
+.pictLogo{
+  width: 10rem;
+}
+.pictlogoMove{
+  width: 10rem;
+  transform: translateX(10rem) rotateZ(360deg);
+  transition-duration: 2s;
+}
+#enter{
+  font-family: 'Goldman', cursive;
+}

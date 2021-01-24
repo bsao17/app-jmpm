@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+#navbBarAll{
+  background-color: #002040;
+  width: 100%;
+  box-shadow: inset 12px 12px 24px #001121,
+  inset -12px -12px 24px #002f5f;
+}
+
+#title{
+  font-family: 'Goldman', cursive;
+  color: #002040;
+  font-size: 2rem;
+  text-shadow:
+    aliceblue 3px 3px 3px,
+    lightslategray -3px -3px 3px;
+}
+#dropMenu{
+  font-family: 'Cabin Sketch', cursive;
+  position: absolute;
+  right: 5% ;
+}
+#titleMenu{
+  color: #FF0000;
+}
+#switch{
+  border-radius: 10px;
+  background: #002040;
+  box-shadow:  12px 12px 24px #001123,
+  -12px -12px 24px #002f5d;
+}
+#signin{
+  border-radius: 10px;
+  background: #002040;
+  box-shadow:  12px 12px 24px #001123,
+  -12px -12px 24px #002f5d;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+

@@ -1,0 +1,60 @@
+<div class="d-flex flex-column">
+  <div class="card mb-5">
+      <div class="card-header bg-success text-dark">A propos ... de moi !</div>
+    <br>
+    <img src="assets/pictures/avatars/selfie2.png" alt="selfie" class="w-50 m-auto rounded-circle shadow-lg ">
+    <div class="card-body">
+      <div class="card-text" id="apropos">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Animi asperiores harum id illo illum inventore iste laudantium necessitatibus nihil nulla,
+        odit possimus praesentium quas sapiente sit, suscipit, tempora totam. Accusamus amet,
+        aperiam, autem consectetur deleniti ducimus eligendi facilis hic, id magnam maxime odit officiis omnis quasi
+        quia quisquam ut voluptas.
+      </div>
+    </div>
+      <a class="card-footer text-center bg-dark" (click)="getAdmin()">Administrators</a>
+  </div>
+
+  <div class="card mb-5 text-center">
+    <div class="card-header bg-primary text-dark text-left">Suivez-nous</div>
+    <div class="card-body w-100">
+      <a href="https://www.facebook.com/brunoDevOps/?view_public_for=101670148295386" class="card-text text-center" target="_blank">
+        <i class="fab fa-facebook h1 mx-2 text-primary"></i>
+      </a>
+      <a href="" class="card-text text-center">
+        <i class="fab fa-linkedin h1 mx-2"></i>
+      </a>
+      <a href="" class="card-text text-center">
+        <i class="fab fa-instagram h1 text-danger mx-2"></i>
+      </a>
+      <a href="https://github.com/bsao17" class="card-text text-center" target="_blank">
+        <i class="fab fa-github-square h1 mx-2 text-dark"></i>
+      </a>
+      <a href="http://devwebdino.com/" class="card-text text-center" target="_blank">
+        <i class="fas fa-link h1 mx-2"></i>
+      </a>
+    </div>
+    <div class="card-footer text-center bg-dark">Comments</div>
+  </div>
+
+  <div class="card mb-5">
+    <div class="card-header bg-dark">Technos préférées</div>
+    <br>
+    <img src="assets/pictures/avatars/technos.jpg" alt="selfie" class="w-50 m-auto rounded-circle shadow-lg ">
+    <div class="card-body">
+      <div class="text-primary">PHP/Symfony</div>
+      <progress class="uk-progress" value="85" max="100"></progress>
+    </div>
+    <div class="card-body">
+      <div class="text-warning">Javascript/<span class="text-danger">Angular(Typescript)</span>
+        /<span class="text-primary">React</span>
+        /<span class="text-success">Vue.js</span>
+      </div>
+      <progress class="uk-progress" value="80" max="100"></progress>
+    </div>
+    <div class="card-body">
+      <div class="">HTML/CSS/SASS</div>
+      <progress class="uk-progress" value="95" max="100"></progress>
+    </div>
+    <div class="card-footer text-center bg-dark">Comments</div>
+  </div>
+</div>

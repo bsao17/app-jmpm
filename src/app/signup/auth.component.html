@@ -1,0 +1,25 @@
+
+<section class="container my-5">
+  <div class="row">
+    <div class="col-md-3">&nbsp;</div>
+    <div class="col-md-6 p-3 bg-darkmode-dark border rounded text-light">
+      <form id="signup">
+        <fieldset>
+          <legend class="">Créez votre compte utilisateur</legend>
+
+          <div class="form-group">
+            <label for="inputEmail">Email address</label>
+            <input type="email" class="form-control px-3" id="inputEmail" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">Votre email ne sera jamais partagé.</small>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control px-3" id="inputPassword" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary" (click)="onCreateAccount('page1')">S'inscrire</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</section>
+

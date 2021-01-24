@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&family=Roboto+Mono&display=swap');
+
+.fontGlobal{
+  font-family: 'Goldman', cursive;
+}
+.fontArticle{
+  font-family: 'Roboto Mono', monospace;
+}
+.fontTitle{
+  font-family: 'Play', sans-serif;
+}
+#banner{
+  background: #e0e0e0;
+  box-shadow:
+    inset 17px 17px 37px #929292,
+    inset -17px -17px 37px #ffffff;
+}
+#header{
+  font-family: 'Play', sans-serif;
+  background: #e0e0e0;
+  box-shadow:
+    inset 17px 17px 37px #929292,
+    inset -17px -17px 37px #ffffff;
+}

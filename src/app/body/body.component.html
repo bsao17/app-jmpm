@@ -1,0 +1,63 @@
+
+<!-- Grid -->
+<div class="w3-row text-secondary">
+
+  <!-- Blog entries -->
+  <div class="m-5 fontArticle">
+    <!-- Header -->
+    <header class="bg-darkmode-dark my-2 rounded-lg py-3" id="header">
+      <div class="text-center h3">
+        <div class="display-4">
+          <div>Articles ...</div>
+        </div>
+        <div class="mb-0">
+          <div> A partir du : {{ date }}</div>
+        </div>
+      </div>
+      <br>
+      <div class="blockquote text-center border-0 py-2 ">
+        <div>
+          <p class="text-danger h3">“La connaissance est toujours un butin.”</p>
+          <cite title="Source Title">Maxime Gorki...</cite>
+        </div>
+      </div>
+    </header>
+    <hr>
+    <!--Articles-->
+    <div class="row">
+      <div class="col-md-8">
+        <div *ngFor="let item of this.globalServices.datapi" class="mb-5">
+          <div class="card-header bg-dark bg-darkmode-dark">
+            <h3 class="text-center text-warning fontTitle"><b>{{item.title}}</b></h3>
+          </div>
+          <div class="card border-0 ">
+            <div class="card-title p-3">
+              <h4 class="w3-opacity text-center fontTitle text-success">{{item.date | date}}</h4>
+              <div class="h4 border-0 p-2 text-lg-left">
+                <a href="{{item.picture}}" target="_blank">
+                  <img [src]="item.picture" class="w-25 float-left mr-3 mb-2" alt="picture">
+                </a>
+                <pre>{{item.content.slice(0, 183)}}</pre> <br>
+                <a routerLink="article/{{item.id}}" class="btn btn-outline-primary mt-3 ">Suite de l'article</a>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <div class="w3-row">
+                <div class="w3-col m4 w3-hide-small">
+                  <p><span class="w3-padding-large w3-right fontTitle"><b>Comments &nbsp;</b> <span class="w3-badge">0
+                      </span></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- END BLOG ENTRIES -->
+      </div>
+      <div class="col-md-4">
+        <app-right-column></app-right-column>
+      </div>
+    </div>
+  </div>
+</div>
