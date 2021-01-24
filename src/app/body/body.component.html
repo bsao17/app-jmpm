@@ -37,8 +37,12 @@
                 <a href="{{item.picture}}" target="_blank">
                   <img [src]="item.picture" class="w-25 float-left mr-3 mb-2" alt="picture">
                 </a>
-                <pre>{{item.content.slice(0, 183)}}</pre> <br>
-                <a routerLink="article/{{item.id}}" class="btn btn-outline-primary mt-3 ">Suite de l'article</a>
+                <div class="container d-flex flex-column">
+                  <p>{{item.content.slice(0, 183)}}</p>
+                  <br>
+                  <a routerLink="article/{{item.id}}" class="btn btn-outline-primary mt-3 ">Suite de l'article</a>
+
+                </div>
               </div>
             </div>
 
