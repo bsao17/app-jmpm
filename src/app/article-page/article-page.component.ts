@@ -12,7 +12,8 @@ export class ArticlePageComponent implements OnInit {
   dataApiTitle: string;
   dataApiContent: object;
   dataApiAuthors: string;
-  dataApiDate: string;
+  dataApiDateTime: string;
+  dataApiImg: string;
 
   constructor(private router: Router, public httpClient: HttpClient) { }
 
@@ -28,7 +29,16 @@ export class ArticlePageComponent implements OnInit {
       .subscribe(
         (response) => {
           // @ts-ignore
-          ({content: this.dataApiContent, title: this.dataApiTitle, authors: this.dataApiAuthors} = response);
+          ({content: this.dataApiContent,
+            // @ts-ignore
+            title: this.dataApiTitle,
+            // @ts-ignore
+            authors: this.dataApiAuthors,
+            // @ts-ignore
+            date: this.dataApiDateTime,
+            // @ts-ignore
+            picture: this.dataApiImg} = response);
+          console.log(response);
         },
         (error) =>  console.log(error),
         () => console.log('complete')

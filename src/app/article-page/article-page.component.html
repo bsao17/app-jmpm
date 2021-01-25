@@ -1,13 +1,15 @@
-<div class="container">
-  <h2 class="card-header">
-    {{dataApiTitle}} <br>
-    <span class="h6">{{dataApiAuthors}}</span> 
-  </h2>
+<div class="container my-5">
   <div class="card darkMode">
-    <pre class="card-text">{{dataApiContent}}</pre>
-  </div>
-  <div class="card-footer darkMode">
-    <a href="page1" class="btn btn-dark m-5">Revenir</a>
+    <h2 class="card-header d-flex flex-column border-top border-left border-right bg-darkmode-dark">
+      <span class="font-weight-bold text-warning m-4">{{dataApiTitle}}</span>
+      <img src="{{dataApiImg}}" alt="chat" class="w-50 m-auto">
+    </h2>
+    <pre id="content" class="card-body m-0 bg-darkmode-black">{{dataApiContent}}<br>
+      <span class="h6 m-0"> Article écrit par : <span class="text-primary ">{{dataApiAuthors}}</span></span></pre>
+    <div class="card-footer d-flex justify-content-between border-bottom border-left border-right bg-darkmode-dark">
+      <a class="btn btn-danger m-5" href="page1"><i class="fas fa-undo-alt"></i></a>
+      <a class="btn btn-success m-5" href="page1">Commenter</a>
+    </div>
   </div>
 </div>
 

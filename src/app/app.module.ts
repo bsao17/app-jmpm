@@ -24,6 +24,7 @@ import {FormsModule} from '@angular/forms';
 import { RightColumnComponent } from './right-column/right-column.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { ArticlePageComponent } from './article-page/article-page.component';
+import { SharedModule} from './modules/shared/shared.module';
 
 
 const appRoutes: Routes = [
@@ -61,7 +62,8 @@ const appRoutes: Routes = [
     ButtonModule,
     UploadModule,
     AccordionModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   providers: [
     Globalservices,
