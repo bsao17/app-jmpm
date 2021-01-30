@@ -26,21 +26,21 @@
     <!--Articles-->
     <div class="row">
       <div class="col-md-8">
-        <div *ngFor="let item of this.globalServices.datapi" class="mb-5">
+        <div *ngFor="let billet of this.globalServices.datapi" class="mb-5">
           <div class="card-header bg-dark bg-darkmode-dark">
-            <h3 class="text-center text-warning fontTitle"><b>{{item.title}}</b></h3>
+            <h3 class="text-center text-warning fontTitle"><b>{{billet.title}}</b></h3>
           </div>
           <div class="card border-0 ">
             <div class="card-title p-3">
-              <h4 class="w3-opacity text-center fontTitle text-success">{{item.date | date}}</h4>
+              <h4 class="w3-opacity text-center fontTitle text-success">{{billet.date | date}}</h4>
               <div class="h4 border-0 p-2 text-lg-left">
-                <a href="{{item.picture}}" target="_blank">
-                  <img [src]="item.picture" class="w-25 float-left mr-3 mb-2" alt="picture">
+                <a href="{{billet.picture}}" target="_blank">
+                  <img [src]="billet.picture" class="w-25 float-left mr-3 mb-2" alt="picture">
                 </a>
                 <div class="container d-flex flex-column">
-                  <p>{{item.content.slice(0, 183)}}</p>
+                  <p>{{billet.content.slice(0, 183)}}</p>
                   <br>
-                  <a routerLink="article/{{item.id}}" class="btn btn-outline-primary mt-3 ">Suite de l'article</a>
+                  <a routerLink="article/{{billet.id}}" class="btn btn-outline-primary mt-3 ">Suite de l'article</a>
 
                 </div>
               </div>

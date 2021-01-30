@@ -37,4 +37,13 @@
 }
 #date{
   font-size: 3vw;
+  text-shadow: white 1px 1px 1px;
+  color: #002448;
+}
+#article{
+  color: #002448;
+  text-shadow: whitesmoke 1px 1px 1px;
+}
+.card-footer{
+  background-color: #173450;
 }
