@@ -19,7 +19,7 @@ export class ArticlePageComponent implements OnInit {
   dataApiAuthors: string;
   dataApiDateTime: string;
   dataApiImg: string;
-  responseUser: any;
+  emailUser: any;
 
   constructor(private router: Router, public httpClient: HttpClient, public globalServices: Globalservices) {
   }
@@ -60,24 +60,16 @@ export class ArticlePageComponent implements OnInit {
             this.comments = comments['hydra:member'];
             this.commentContent = comments['hydra:member'][0].content;
             this.commentDate = comments['hydra:member'][0].date;
-            console.log('le nombre d\'instances est de ' + this.comments.length + ' commentaires pour cet articles');
+            console.log('le nombre d\'instances est de ' + this.comments.length + 'commentaires pour cet articles');
       },
       (error) => console.log(error),
       () => console.log('Complete')
     );
   }
-  getCo(): any{
-  }
   // GET User from API
   getUsers(): any{
     this.httpClient.get(`https://jmpmapi.herokuapp.com/api/users/${this.idBillet}`).subscribe(
-      response => {
-        this.responseUser = {
-          // @ts-ignore
-          email: response.email,
-        };
-        console.log(response);
-      },
+      response => this.emailUser = response.email,
       (error) => console.log(error),
       () => console.log('Complete')
     );

@@ -11,14 +11,13 @@
       <a class="btn btn-success m-2" >Commenter</a>
     </div>
   </div>
-  <div class="card mt-5 p-3">
+  <div class="card mt-5 p-3" *ngFor="let comment of this.comments">
     <div class="card-body">
-      <div class="card-title h5">Commentaire écrit le : {{this.commentDate | date }}<span class="text-primary"></span>
-       par <span class="text-primary"></span>
+      <div class="card-title h5">Commentaire écrit le : {{ comment.date | date }}<span class="text-primary"></span>
+       par <span class="text-primary">{{emailUser}}</span>
       </div>
-      <div class="card-text">{{this.commentContent}}</div>
+      <div class="card-text">{{ comment.content}}</div>
     </div>
-
   </div>
 </div>
 
