@@ -11,9 +11,8 @@ export class Globalservices {
   dataId: any;
   datapi: any[];
   comments: any;
-  singleComment: any;
   id: any;
-  onGetData(): any{
+  onGetDataBillet(): any{
     this.httpClient.get(`https://jmpmapi.herokuapp.com/api/billets`).subscribe((response) => {
       this.data = [response];
       this.datapi = this.data[0]['hydra:member'];
@@ -22,16 +21,11 @@ export class Globalservices {
       () => { console.log('Complete'); }
     );
   }
-
-  getComments(id: number): any{
-    this.httpClient.get(`https://jmpmapi.herokuapp.com/api/comments/`).subscribe(
-      comments => {
-        this.comments = comments['hydra:member'][id];
-        this.singleComment = comments['hydra:member'];
-        console.log('log GlobalServoces', this.comments, id);
-      },
-      (error) => console.log(error),
-      () => console.log('Complete')
+  onGetComments(id): any{
+    const comments = this.httpClient.get(`https://jmpmapi.herokuapp.com/api/billets/${id}/comments?page=3`);
+    comments.subscribe(
+      (response) => console.log(response),
+      (error) => console.log(error)
     );
   }
 }

@@ -4,14 +4,33 @@
     <br>
     <img src="assets/pictures/avatars/selfie2.png" alt="selfie" class="w-50 m-auto rounded-circle shadow-lg ">
     <div class="card-body">
-      <div class="card-text" id="apropos">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Animi asperiores harum id illo illum inventore iste laudantium necessitatibus nihil nulla,
-        odit possimus praesentium quas sapiente sit, suscipit, tempora totam. Accusamus amet,
-        aperiam, autem consectetur deleniti ducimus eligendi facilis hic, id magnam maxime odit officiis omnis quasi
-        quia quisquam ut voluptas.
+      <div class="card-text" id="apropos">
+        Comme un lien vos mieux que de longs discours, voici une petite présentaion de mon humble personne.
+        <hr>
+        <a href="https://www.notion.so/Mon-Parcours-professionnel-ou-pas-0ccff20078bb4199a4108289b424bc95" target="_blank">
+          Mon parcours pro, ou pas ...
+        </a>
       </div>
     </div>
-      <a class="card-footer text-center bg-dark" (click)="getAdmin()">Administrators</a>
+      <a class="card-footer text-center bg-dark" routerLink="/admin" (click)="getAdmin()">Administrators</a>
+  </div>
+
+  <div class="card mb-5">
+    <div class="card-header bg-dark text-center font-weight-bold">Contact ... </div>
+
+        <form  #contactForm="ngForm" (ngSubmit)="onContact(contactForm)"  class="card-body">
+
+          <input type="hidden" name="apikey" value="ba1f3e0a-40bb-4ebd-8491-d6ed8ac20560" >
+
+          <input type="text" name="name" class="form-control" placeholder="votre nom et prénom" ngModel required>
+          <input type="email" name="email" class="form-control" placeholder="votre email" ngModel  required>
+          <textarea name="message" class="form-control" placeholder="votre message" ngModel required></textarea>
+
+          <button type="submit" class="btn btn-success" >Envoyer</button>
+
+        </form>
+
+    <div class="card-footer text-center bg-dark" (click)="getAdmin()"></div>
   </div>
 
   <div class="card mb-5 text-center">

@@ -11,7 +11,6 @@ import {Globalservices} from '../service/globalservices';
 export class ArticlePageComponent implements OnInit {
   idBillet: number;
   comments: any[];
-  commentsNumber: number;
   commentContent: any;
   commentDate: Date;
   dataApiTitle: string;
@@ -21,19 +20,19 @@ export class ArticlePageComponent implements OnInit {
   dataApiImg: string;
   emailUser: any;
 
-  constructor(private router: Router, public httpClient: HttpClient, public globalServices: Globalservices) {
+  constructor(private router: Router, public httpClient: HttpClient) {
   }
 
   ngOnInit(): void {
     const url: string = this.router.url;
     const urlArray: any[] = url.split('/');
     this.idBillet = Number(urlArray[3]);
-    this.getDataById();
-    this.getIdBilletOfComments();
+    this.getBilletById();
+    this.getCommentsByBillet();
     this.getUsers();
   }
   // GET Billets from API
-  getDataById(): any{
+  getBilletById(): any{
     this.httpClient.get(`https://jmpmapi.herokuapp.com/api/billets/${this.idBillet}`)
       .subscribe(
         (response) => {
@@ -53,7 +52,7 @@ export class ArticlePageComponent implements OnInit {
         () => console.log('complete')
       );
   }
-  getIdBilletOfComments(): any{
+  getCommentsByBillet(): any{
     const requestComment = this.httpClient.get(`https://jmpmapi.herokuapp.com/api/billets/${this.idBillet}/comments`);
     requestComment.subscribe(
       comments => {

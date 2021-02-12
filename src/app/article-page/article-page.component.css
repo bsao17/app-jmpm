@@ -13,12 +13,18 @@
   padding-left: 100px;
 }
 #card{
-  box-shadow: none;
-  border-radius: 5px;
+  border-radius: 10px;
+  background: #EBEBEB;
+  box-shadow: inset 16px 16px 18px #9d9d9d,
+  inset -16px -16px 18px #ffffff;
 }
+pre{
+  background-color: transparent;
+}
+
 #img{
   width: 30%;
 }
 #card-footer{
-  background-color: #173450;
+  /*background-color: #173450;*/
 }

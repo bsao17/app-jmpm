@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../service/auth.service';
-import {log} from 'util';
+import {FormBuilder, FormGroup, NgForm} from '@angular/forms';
+import {HttpClient} from '@angular/common/http';
+import {HttpHeaders} from '@angular/common/http';
 
 @Component({
   selector: 'app-right-column',
@@ -8,13 +10,18 @@ import {log} from 'util';
   styleUrls: ['./right-column.component.css']
 })
 export class RightColumnComponent implements OnInit {
-  admin: any;
-  constructor(private authServices: AuthService) { }
+
+  constructor(private authServices: AuthService, private formBuilder: FormBuilder, private httpClient: HttpClient) { }
+
 
   ngOnInit(): void {
   }
-  getAdmin(): any{
-    this.authServices.getAdmin()
+
+  onContact(contactForm: NgForm): void {
+      console.log(contactForm.value);
+  }
+  getAdmin(): object{
+    return this.authServices.getAdmin()
       .subscribe(response => console.log(response));
   }
 }

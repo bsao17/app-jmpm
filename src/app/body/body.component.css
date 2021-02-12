@@ -47,3 +47,6 @@
 .card-footer{
   background-color: #173450;
 }
+#card-article{
+  box-shadow: none;
+}

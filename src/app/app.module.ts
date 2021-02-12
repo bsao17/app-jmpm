@@ -20,11 +20,12 @@ import { environment} from '../environments/environment';
 import { AngularFireAuthModule} from '@angular/fire/auth';
 import {SigninComponent} from './signin/signin.component';
 import {InputModule, ButtonModule, CoreModule, UploadModule, AccordionModule} from 'truly-ui';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RightColumnComponent } from './right-column/right-column.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { ArticlePageComponent } from './article-page/article-page.component';
 import { SharedModule} from './modules/shared/shared.module';
+import { ContactComponent } from './contact/contact.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 const appRoutes: Routes = [
@@ -33,6 +34,8 @@ const appRoutes: Routes = [
   {path: 'signin', component: SigninComponent},
   {path: 'page1', component: BodyComponent},
   {path: 'page1/article/:id', component: ArticlePageComponent},
+  {path: 'contact', component: ContactComponent},
+  {path: 'admin', component: DashboardComponent},
 ];
 
 @NgModule({
@@ -47,8 +50,9 @@ const appRoutes: Routes = [
     WebAgencyComponent,
     SigninComponent,
     RightColumnComponent,
-    AdminDashboardComponent,
-    ArticlePageComponent
+    ArticlePageComponent,
+    ContactComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +67,7 @@ const appRoutes: Routes = [
     UploadModule,
     AccordionModule,
     FormsModule,
+    ReactiveFormsModule,
     SharedModule
   ],
   providers: [

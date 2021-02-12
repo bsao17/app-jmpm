@@ -10,7 +10,8 @@ import {Globalservices} from '../service/globalservices';
 export class BodyComponent implements OnInit {
 
   date: any = new Date().toLocaleDateString('fr-FR');
-  onData: any[] = this.globalServices.onGetData();
+  onData: any[] = this.globalServices.onGetDataBillet();
+  numberComments: any[];
   constructor(public globalServices: Globalservices) { }
 
   ngOnInit(): void {

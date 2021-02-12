@@ -11,14 +11,14 @@
           <div id="article">Articles ...</div>
         </div>
         <div class="mb-0">
-          <div id="date"> A partir du : {{ date }}</div>
+          <div id="date">{{ date }}</div>
         </div>
       </div>
       <br>
       <div class="blockquote text-center border-0 py-2 ">
         <div>
           <p class="text-danger h3">“La connaissance est toujours un butin.”</p>
-          <cite title="Source Title">Maxime Gorki...</cite>
+          <cite title="Source Title" class="text-muted">Maxime Gorki...</cite>
         </div>
       </div>
     </header>
@@ -27,11 +27,11 @@
     <div class="row">
       <div class="col-md-8">
         <div *ngFor="let billet of this.globalServices.datapi" class="mb-5">
-          <div class="card-header bg-dark bg-darkmode-dark">
+          <div class="card-header bg-darkmode-dark">
             <h3 class="text-center text-warning fontTitle"><b>{{billet.title}}</b></h3>
           </div>
-          <div class="card border-0 ">
-            <div class="card-title p-3">
+          <div class="card border-0 bg-transparent">
+            <div class="p-3" id="card-article">
               <h4 class="w3-opacity text-center fontTitle text-success">{{billet.date | date}}</h4>
               <div class="h4 border-0 p-2 text-lg-left">
                 <a href="{{billet.picture}}" target="_blank">
@@ -46,11 +46,11 @@
               </div>
             </div>
 
-            <div class="card-footer">
+            <div class="card-footer bg-transparent">
               <div class="w3-row">
                 <div class="w3-col m4 w3-hide-small">
-                  <p><span class="w3-padding-large w3-right fontTitle"><b>Comments &nbsp;</b> <span class="w3-badge">0
-                      </span></span></p>
+                  <p><span class="w3-padding-large w3-right fontTitle"><b>Comments &nbsp;</b>
+                    <span class="w3-badge"></span>{{this.numberComments}}</span></p>
                 </div>
               </div>
             </div>
